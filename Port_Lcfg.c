@@ -38,3 +38,4 @@
  ||  (PORT_LCFG_SW_PATCH_VERSION != PORT_SW_PATCH_VERSION))
   #error "The SW version of Port_Lcfg.c does not match the expected version"
 #endif
+   

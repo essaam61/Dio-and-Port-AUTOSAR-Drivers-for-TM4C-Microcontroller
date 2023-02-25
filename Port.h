@@ -162,19 +162,19 @@ typedef enum
  */
 typedef struct 
 { 
-    Port_PinModeType mode;
-    uint8 port_num;
-    Port_PinType pin_num;
-    Port_PinDirectionType direction;
-    Port_PinInternalResistorType resistor;
-    uint8 initial_value;
-    uint8 changeable_pindirection;
-    uint8 changeable_pinmode;
+    Port_PinModeType Port_Pin_Mode;
+    uint8 Port_Num;
+    Port_PinType Pin_Num;
+    Port_PinDirectionType Port_Pin_Direction;
+    Port_PinInternalResistorType Port_Pin_Resistor;
+    uint8 Port_Pin_Level_Value;
+    uint8 Port_Pin_Direction_Changeable;
+    uint8 Port_Pin_Mode_Changeable;
 
     #if (PORT_OPTIONAL_CONFIG == STD_ON)
-    uint8 opendrain_mode;
-    Port_PinOutputCurrentType current;
-    uint8 slewrate;
+    uint8 Pin_Driven_Mode;
+    Port_PinOutputCurrentType Pin_Current;
+    uint8 Pin_Slew_Rate;
     #endif
     
 }Port_ConfigPin;
@@ -182,7 +182,7 @@ typedef struct
 /* Data Structure required for initializing the Port Driver */
 typedef struct
 {
-  Port_ConfigPin Pins[PORT_TOTAL_NO_OF_PINS];
+  Port_ConfigPin Pins[PORT_NUMBER_OF_PORT_PINS];
 }Port_ConfigType;
 
 /*******************************************************************************

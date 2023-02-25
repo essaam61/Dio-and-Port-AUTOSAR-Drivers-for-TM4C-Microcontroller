@@ -32,6 +32,9 @@
 /* Pre-compile option for Set Pin Direction API */
 #define PORT_SET_PIN_DIRECTION_API           (STD_ON)
 
+/* Pre-compile option for Set Pin Mode API */
+#define PORT_SET_PIN_MODE_API                (STD_ON)
+
 /* Pre-compile option for Version Info API */
 #define PORT_VERSION_INFO_API                (STD_ON)
 
@@ -122,9 +125,9 @@
 #define PORT_F_PIN_4    (Port_PinType)42   
 
 /* Number of the configured Port Pins */
-#define PORT_TOTAL_NO_OF_PINS 43
+#define PORT_NUMBER_OF_PORT_PINS        (43U)
    
 /* Number of the configured Port Pin Modes */
-#define PORT_TOTAL_NO_OF_MODES 13
+#define PORT_NUMBER_OF_PORT_PIN_MODES      (13U)
 
 #endif /* PORT_CFG_H */
